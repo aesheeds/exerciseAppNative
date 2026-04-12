@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import Home from "./screens/Home";
+import RepetitionExercise from "./screens/RepetitionExercise";
+import DurationExercise from "./screens/DurationExercise";
+
+import { exercises } from "./data/exercises";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          initialParams={{ exercises }}
+          options={{ title: "Home" }}
+        />
+
+        <Stack.Screen
+          name="RepetitionExercise"
+          component={RepetitionExercise}
+          options={{ title: "RepetitionExercise" }}
+        />
+
+        <Stack.Screen
+          name="DurationExercise"
+          component={DurationExercise}
+          options={{ title: "DurationExercise" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
