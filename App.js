@@ -1,6 +1,5 @@
 import React from "react";
-import { Pressable } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Pressable, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -21,7 +20,7 @@ export default function App() {
           headerLeft: ({ canGoBack }) =>
             canGoBack ? (
               <Pressable onPress={() => navigation.goBack()} style={{ marginRight: 8 }}>
-                <Ionicons name="chevron-back" size={24} color="#ec4899" />
+                <Text style={{ color: "#ec4899", fontSize: 22 }}>←</Text>
               </Pressable>
             ) : null,
         })}
