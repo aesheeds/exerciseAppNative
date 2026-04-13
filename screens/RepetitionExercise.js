@@ -61,7 +61,7 @@ export default function RepetitionExercise({ navigation, route }) {
         <Button
           title="Home"
           type="solid"
-          onPress={() => navigation.navigate("Home", { exercises })}
+          onPress={() => navigation.popToTop()}
           buttonStyle={styles.homeButton}
           titleStyle={styles.pillTitle}
           containerStyle={styles.btnContainer}
@@ -95,13 +95,13 @@ const styles = StyleSheet.create({
     width: LAYOUT.buttonWidth,
   },
   suggestedButton: {
-    backgroundColor: COLORS.green,
+    backgroundColor: COLORS.rose,
     borderRadius: LAYOUT.radiusPill,
     paddingVertical: 10,
   },
   suggestedTitle: {
     fontWeight: "700",
-    color: "#064e3b",
+    color: "#881337",
   },
   counter: {
     marginTop: 6,
@@ -117,12 +117,12 @@ const styles = StyleSheet.create({
     width: 110,
   },
   smallButton: {
-    backgroundColor: COLORS.teal,
+    backgroundColor: COLORS.pink,
     borderRadius: 14,
     paddingVertical: 10,
   },
   homeButton: {
-    backgroundColor: COLORS.teal,
+    backgroundColor: COLORS.pink,
     borderRadius: LAYOUT.radiusPill,
     paddingVertical: 14,
   },

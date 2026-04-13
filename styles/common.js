@@ -1,9 +1,9 @@
 import { Platform } from "react-native";
 
 export const COLORS = {
-  teal: "#39b7ad",
-  tealDark: "#0f766e",
-  green: "#4ade80",
+  pink: "#ec4899",
+  pinkDark: "#be185d",
+  rose: "#fda4af",
   text: "#111827",
   muted: "#6b7280",
 };

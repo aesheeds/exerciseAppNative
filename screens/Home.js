@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     width: LAYOUT.buttonWidth,
   },
   pillButton: {
-    backgroundColor: COLORS.teal,
+    backgroundColor: COLORS.pink,
     borderRadius: LAYOUT.radiusPill,
     paddingVertical: 14,
   },
